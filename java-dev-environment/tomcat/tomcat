@@ -1,0 +1,28 @@
+#!/bin/bash
+
+### BEGIN INIT INFO
+# Provides:          tomcat
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start/Stop Tomcat server
+### END INIT INFO
+
+PATH=/home/vagrant/.jenv/bin:/sbin:/bin:/usr/sbin:/usr/bin
+. /home/vagrant/.bashrc
+
+start() {
+  su - vagrant -c "PATH=$PATH; . /home/vagrant/.bashrc; /home/vagrant/servers/apache-tomcat/bin/startup.sh"
+}
+
+stop() {
+  su - vagrant -c "PATH=$PATH; . /home/vagrant/.bashrc; /home/vagrant/servers/apache-tomcat/bin/shutdown.sh"
+}
+
+
+case $1 in
+  start|stop) $1;;
+  restart) stop; start;;
+  *) echo "Run as $0 <start|stop|restart>"; exit 1;;
+esac

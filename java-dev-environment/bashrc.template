@@ -1,0 +1,50 @@
+
+#Start of template
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+
+HOME_BIN="$HOME/bin"
+export PATH="$HOME_BIN/apache-maven/bin:$HOME_BIN/gradle/bin:$HOME_BIN/sbt/bin:$HOME_BIN/apache-ant/bin:$PATH"
+
+
+function jdebug_set() {
+    jenv shell-options "$JENV_OPTIONS -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=8000,suspend=n"
+}
+
+function jdebug_unset() {
+    jenv shell-options --unset
+}
+
+function gc_set() {
+    jenv shell-options "$JENV_OPTIONS -XX:+PrintGCDetails -Xloggc:gc.log"
+}
+
+function gc_unset() {
+    jenv shell-options --unset
+}
+
+function jrebel_set() {
+    jenv shell-options "$JENV_OPTIONS -javaagent:$HOME_BIN/jrebel/jrebel.jar -noverify"
+}
+
+function jrebel_unset() {
+    jenv shell-options --unset
+}
+
+function jprofiler_set() {
+    jenv shell-options "$JENV_OPTIONS -javaagent:$HOME_BIN/jprofiler/bin/agent.jar"
+}
+
+function jprofiler_unset() {
+    jenv shell-options --unset
+}
+
