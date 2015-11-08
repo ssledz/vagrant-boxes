@@ -1,10 +1,10 @@
 Creates server development environment for java developer
 
 * available jdks
- * [jdk-5u22-linux-x64.tar.gz](http://sof-tech.pl/jdk/jdk-5u22-linux-x64.tar.gz)
- * [jdk-6u45-linux-x64.tar.gz](http://sof-tech.pl/jdk/jdk-6u45-linux-x64.tar.gz)
- * [jdk-7u80-linux-x64.tar.gz](http://sof-tech.pl/jdk/jdk-7u80-linux-x64.tar.gz)
- * [jdk-8u65-linux-x64.tar.gz](http://sof-tech.pl/jdk/jdk-8u65-linux-x64.tar.gz)
+  * [jdk-5u22-linux-x64.tar.gz](http://sof-tech.pl/jdk/jdk-5u22-linux-x64.tar.gz)
+  * [jdk-6u45-linux-x64.tar.gz](http://sof-tech.pl/jdk/jdk-6u45-linux-x64.tar.gz)
+  * [jdk-7u80-linux-x64.tar.gz](http://sof-tech.pl/jdk/jdk-7u80-linux-x64.tar.gz)
+  * [jdk-8u65-linux-x64.tar.gz](http://sof-tech.pl/jdk/jdk-8u65-linux-x64.tar.gz)
 * mysql (starts on boot)
   * all character sets set to ```utf8``` 
   * server 
@@ -17,41 +17,41 @@ Creates server development environment for java developer
   * client 
     * ```mysql -u root -proot```
 * nginx (starts on boot)
- * serves content from ```/home/vagrant/public_html``` 
- * [http://localhost:8080](http://localhost:8080)
- * [https://localhost:4443](https://localhost:4443)
- * [http://192.168.33.10](http://192.168.33.10)
- * [https://192.168.33.10](https://192.168.33.10)
- * management (```Usage: nginx {start|stop|restart|reload|force-reload|status|configtest|rotate|upgrade}```)
-  * ```sudo service nginx stop```
-  * ```sudo service nginx start```
-  * ```sudo service nginx reload```
-  * ```sudo service nginx restart```
-  * ```sudo service nginx status```
+  * serves content from ```/home/vagrant/public_html``` 
+  * [http://localhost:8080](http://localhost:8080)
+  * [https://localhost:4443](https://localhost:4443)
+  * [http://192.168.33.10](http://192.168.33.10)
+  * [https://192.168.33.10](https://192.168.33.10)
+  * management (```Usage: nginx {start|stop|restart|reload|force-reload|status|configtest|rotate|upgrade}```)
+    * ```sudo service nginx stop```
+    * ```sudo service nginx start```
+    * ```sudo service nginx reload```
+    * ```sudo service nginx restart```
+    * ```sudo service nginx status```
 * tomcat 8 (starts on boot) 
- * http://192.168.33.10:8080 (root content)
- * http://192.168.33.10/manager (manager - configuration in nginx)
- * http://192.168.33.10:8080/manager
- * management (```Run as /etc/init.d/tomcat <start|stop|restart>```)
-  * sudo service tomcat stop
-  * sudo service tomcat start
-  * sudo service tomcat restart
+  * http://192.168.33.10:8080 (root content)
+  * http://192.168.33.10/manager (manager - configuration in nginx)
+  * http://192.168.33.10:8080/manager
+  * management (```Run as /etc/init.d/tomcat <start|stop|restart>```)
+    * sudo service tomcat stop
+    * sudo service tomcat start
+    * sudo service tomcat restart
 * git
 * svn
 * mc
 * vim
 * java tools
- * mvn
- * ant
- * gradle
+  * mvn
+  * ant
+  * gradle
 * environment managers
- * [jenv](https://github.com/gcuisinier/jenv.git)
- * [rbenv](https://github.com/sstephenson/rbenv.git)
- * [nodenv](https://github.com/OiNutter/nodenv.git)
- * [pyenv](https://github.com/yyuu/pyenv.git)
+  * [jenv](https://github.com/gcuisinier/jenv.git)
+  * [rbenv](https://github.com/sstephenson/rbenv.git)
+  * [nodenv](https://github.com/OiNutter/nodenv.git)
+  * [pyenv](https://github.com/yyuu/pyenv.git)
 * port forwarding 
- * http ```8080 (host) -> 80 (guest)```
- * https ```4443 (host) -> 443 (guest)```
+  * http ```8080 (host) -> 80 (guest)```
+  * https ```4443 (host) -> 443 (guest)```
 * enabled private network interface (guest -> ```192.168.33.10```)
 * current host directory mounted in guest at ```/vagrant```
 
