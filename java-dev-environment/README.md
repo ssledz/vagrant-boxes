@@ -6,16 +6,16 @@ Creates server development environment for java developer
  * [jdk-7u80-linux-x64.tar.gz](http://sof-tech.pl/jdk/jdk-7u80-linux-x64.tar.gz)
  * [jdk-8u65-linux-x64.tar.gz](http://sof-tech.pl/jdk/jdk-8u65-linux-x64.tar.gz)
 * mysql (starts on boot)
- * all character sets set to ```utf8``` 
- * server 
-  * management (```Usage: /etc/init.d/mysql start|stop|restart|reload|force-reload|status```)
-   * ```sudo service mysql stop```
-   * ```sudo service mysql start```
-   * ```sudo service mysql restart```
-   * ```sudo service mysql reload```
-   * ```sudo service mysql status```
- * client 
-  * ```mysql -u root -proot```
+  * all character sets set to ```utf8``` 
+  * server 
+    * management (```Usage: /etc/init.d/mysql start|stop|restart|reload|force-reload|status```)
+      * ```sudo service mysql stop```
+      * ```sudo service mysql start```
+      * ```sudo service mysql restart```
+      * ```sudo service mysql reload```
+      * ```sudo service mysql status```
+  * client 
+    * ```mysql -u root -proot```
 * nginx (starts on boot)
  * serves content from ```/home/vagrant/public_html``` 
  * [http://localhost:8080](http://localhost:8080)
