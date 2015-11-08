@@ -18,10 +18,10 @@ Creates server development environment for java developer
     * ```mysql -u root -proot```
 * nginx (starts on boot)
   * serves content from ```/home/vagrant/public_html``` 
-  * [http://localhost:8080](http://localhost:8080)
-  * [https://localhost:4443](https://localhost:4443)
-  * [http://192.168.33.10](http://192.168.33.10)
-  * [https://192.168.33.10](https://192.168.33.10)
+    * [http://localhost:8080](http://localhost:8080)
+    * [https://localhost:4443](https://localhost:4443)
+    * [http://192.168.33.10](http://192.168.33.10)
+    * [https://192.168.33.10](https://192.168.33.10)
   * management (```Usage: nginx {start|stop|restart|reload|force-reload|status|configtest|rotate|upgrade}```)
     * ```sudo service nginx stop```
     * ```sudo service nginx start```
