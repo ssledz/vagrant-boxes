@@ -33,9 +33,9 @@ Creates server development environment for java developer
   * http://192.168.33.10/manager (manager - configuration in nginx)
   * http://192.168.33.10:8080/manager
   * management (```Run as /etc/init.d/tomcat <start|stop|restart>```)
-    * sudo service tomcat stop
-    * sudo service tomcat start
-    * sudo service tomcat restart
+    * ```sudo service tomcat stop```
+    * ```sudo service tomcat start```
+    * ```sudo service tomcat restart```
 * git
 * svn
 * mc
