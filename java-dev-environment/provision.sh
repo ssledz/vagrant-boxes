@@ -70,8 +70,10 @@ installPackages()
   indent; installPackage vim
   indent; installPackage git
   indent; installPackage mc
-  indent; installPackage libssl-dev libreadline-dev zlib1g-dev
-  indent; installPackage make g++
+  #dependencies for pyenv
+  indent; installPackage make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev
+  #dependencies for rbenv
+  indent; installPackage autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm3 libgdbm-dev
   indent; installPackage apg
   installMysql
   installNginx
@@ -146,6 +148,9 @@ installEnvManagers()
   git clone https://github.com/OiNutter/nodenv.git ~/.nodenv >/dev/null 2>&1
   indent; indent; echo 'Installing plugins that provide nodenv install'
   git clone https://github.com/OiNutter/node-build.git ~/.nodenv/plugins/node-build >/dev/null 2>&1
+  indent; indent; echo "Setting environment variables"
+  export PATH="$HOME/.nodenv/bin:$PATH"
+  eval "$(nodenv init -)"
 
   indent; echo 'Installing pyenv'
   indent; indent; echo 'Clonning from github to ~/.pyenv'
@@ -169,12 +174,15 @@ installRuntimes()
   jenv global 1.8
 
   indent; echo 'Install ruby'
-  #rbenv install 2.1.7
+  #time consuming operation
+  #rbenv install 1.9.3-p0
 
   indent; echo 'Install node.js'
-  #nodenv install 4.2.1
+  nodenv install 4.2.1 >/dev/null 2>&1
+  nodenv global 4.2.1
 
   indent; echo 'install python'
+  #time consuming operation
   #pyenv install 3.5.0
 
 }
